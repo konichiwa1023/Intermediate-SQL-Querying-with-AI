@@ -1,0 +1,3 @@
+SELECT title, release_year, budget
+FROM films
+ORDER BY budget ASC, release_year DESC;
