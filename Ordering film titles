@@ -1,0 +1,3 @@
+SELECT title
+FROM films
+ORDER BY title ASC;
