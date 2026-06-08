@@ -1,0 +1,3 @@
+SELECT country, COUNT(*) AS film_count
+FROM films
+GROUP BY country;
