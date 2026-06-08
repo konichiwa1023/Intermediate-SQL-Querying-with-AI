@@ -1,0 +1,5 @@
+SELECT release_year, COUNT(*) AS film_count
+FROM films
+GROUP BY release_year
+ORDER BY film_count DESC
+LIMIT 5;
