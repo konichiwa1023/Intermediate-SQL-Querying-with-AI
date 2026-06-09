@@ -1,0 +1,6 @@
+SELECT release_year, 
+       MAX(duration) AS highest_duration, 
+       MIN(duration) AS lowest_duration
+FROM films
+GROUP BY release_year
+ORDER BY highest_duration DESC;
