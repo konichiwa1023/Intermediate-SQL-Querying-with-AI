@@ -1,0 +1,3 @@
+SELECT COUNT(film_id) AS film_count
+FROM reviews
+WHERE imdb_score > 8.0;
