@@ -1,1 +1,1 @@
-SELECT * FROM people WHERE SUBSTRING(name, 3, 1) = 'e';
+SELECT * FROM people WHERE name LIKE '__e%';
