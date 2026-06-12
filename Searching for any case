@@ -1,0 +1,3 @@
+SELECT title
+FROM films
+WHERE LOWER(title) LIKE '%future%';
