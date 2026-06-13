@@ -1,0 +1,5 @@
+SELECT *
+FROM films
+WHERE language NOT IN ('English', 'Spanish')
+AND release_year BETWEEN 1980 AND 2020
+AND duration BETWEEN 90 AND 120;
