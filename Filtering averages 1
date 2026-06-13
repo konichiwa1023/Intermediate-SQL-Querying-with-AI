@@ -1,0 +1,3 @@
+SELECT country, AVG(duration) AS average_duration
+FROM films
+GROUP BY country;
