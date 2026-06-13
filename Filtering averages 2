@@ -1,0 +1,6 @@
+SELECT 
+  country, 
+  AVG(duration) AS avg_duration
+FROM films
+GROUP BY country
+HAVING AVG(duration) < 120;
