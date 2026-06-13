@@ -1,0 +1,4 @@
+SELECT title
+FROM films
+WHERE release_year IN (1970, 1980, 1990)
+AND duration < 120;
