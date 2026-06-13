@@ -1,0 +1,5 @@
+SELECT *
+FROM films
+WHERE certification IS NULL
+   OR certification = 'Not Rated'
+   OR certification = 'Unrated';
