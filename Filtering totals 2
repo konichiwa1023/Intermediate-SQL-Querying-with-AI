@@ -1,0 +1,9 @@
+SELECT
+  language,
+  AVG(duration) AS avg_duration
+FROM films
+WHERE duration IS NOT NULL
+GROUP BY language
+HAVING AVG(duration) > 120
+ORDER BY avg_duration DESC
+LIMIT 10;
