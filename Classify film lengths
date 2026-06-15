@@ -1,0 +1,11 @@
+SELECT 
+    id, 
+    title, 
+    duration,
+    CASE 
+        WHEN duration <= 90 THEN 'Short Film'
+        WHEN duration > 90 THEN 'Long Film'
+        ELSE 'Unknown'
+    END AS film_type
+FROM films
+WHERE duration IS NOT NULL AND language = 'English';
