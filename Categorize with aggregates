@@ -1,0 +1,6 @@
+SELECT release_year,
+       COUNT(CASE WHEN gross IS NULL THEN 1 END) AS films_without_gross,
+       COUNT(CASE WHEN gross IS NOT NULL THEN 1 END) AS films_with_gross
+FROM films
+GROUP BY release_year
+ORDER BY release_year;
