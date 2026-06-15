@@ -1,0 +1,9 @@
+SELECT
+  title,
+  certification,
+  CASE
+    WHEN certification IN ('G', 'PG', 'Approved', 'Passed', 'GP') THEN 'Kids'
+    ELSE 'Other'
+  END AS audience_segment
+FROM films
+ORDER BY audience_segment DESC, title;
