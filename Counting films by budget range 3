@@ -1,0 +1,12 @@
+SELECT
+  release_year,
+  COUNT(*) AS film_count,
+  SUM(CASE WHEN budget >= 100000000 THEN 1 ELSE 0 END) AS big_budget,
+  SUM(CASE WHEN budget >= 20000000 AND budget < 100000000 THEN 1 ELSE 0 END) AS mid_budget,
+  SUM(CASE WHEN budget > 0 AND budget < 20000000 THEN 1 ELSE 0 END) AS low_budget
+FROM films
+WHERE release_year >= 2000
+  AND budget IS NOT NULL
+GROUP BY release_year
+HAVING COUNT(*) >= 5
+ORDER BY release_year;
